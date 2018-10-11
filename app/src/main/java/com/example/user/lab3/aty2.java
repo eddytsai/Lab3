@@ -9,7 +9,7 @@ import android.widget.EditText;
 import android.widget.RadioGroup;
 
 public class aty2 extends AppCompatActivity {
-    Button sent_bin;
+
     String sugar = "無糖";
     EditText set_drink;
     String ice_opt = "微冰";
@@ -35,25 +35,25 @@ public class aty2 extends AppCompatActivity {
                         sugar = "半糖";
                         break;
                     case R.id.radioButton4:
-                        sugar = "糖";
+                        sugar = "全糖";
                         break;
                 }
             }
         });
         RadioGroup rg = (RadioGroup)findViewById(R.id.radioGroup2);
-        rg1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 switch(checkedId){
 
                     case R.id.radioButton5:
-                        sugar = "微冰";
+                        ice_opt = "微冰";
                         break;
                     case R.id.radioButton6:
-                        sugar = "少冰";
+                        ice_opt = "少冰";
                         break;
                     case R.id.radioButton7:
-                        sugar = "正常冰";
+                        ice_opt = "正常冰";
                         break;
                 }
             }
